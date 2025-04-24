@@ -17,7 +17,7 @@
 5. 빈 강의실 목록 생성
 6. 강의실 목록 객체화
 7. 빈 강의실 결과 표시 (콘솔 또는 GUI)
-  ![Untitled]()
+  ![Untitled](https://github.com/hyckju/Java_programing/blob/main/image/dosik1.png)
  
 ### 프로그램 실행 예시 
 1. 사용자가 오후 3시 30분에 프로그램을 실행
