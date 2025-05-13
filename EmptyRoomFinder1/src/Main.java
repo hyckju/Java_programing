@@ -16,5 +16,10 @@ public class EmptyRoomFinder {
             this.startHour = startHour;
             this.startMinute = startMinute;
         }
+
+        public boolean contains(int hour, int minute) {
+            return hour >= startHour && hour <= endHour && minute >= startMinute && minute <= endMinute;
+        }
+
     }
 }
