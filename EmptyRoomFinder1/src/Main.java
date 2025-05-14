@@ -6,19 +6,22 @@ import java.util.Scanner;
 public class EmptyRoomFinder {
 
     /// TimeSiot: 예약된 시간 구간 표현
-    public static class TimeSlot {
-        public int startHour;
-        public int startMinute;
-        public int endHour;
-        public int endMinute;
+    static class TimeSlot {
+        private final int startHour;
+        private final int endHour;
 
-        public TimeSlot(int startHour, int startMinute, int endHour, int endMinute) {
+
+        public TimeSlot(int startHour, int endHour) {
             this.startHour = startHour;
-            this.startMinute = startMinute;
+            this.endHour = endHour;
         }
 
-        public boolean contains(int hour, int minute) {
-            return hour >= startHour && hour <= endHour && minute >= startMinute && minute <= endMinute;
+        public boolean contains(int hour) {
+            return hour >= startHour && hour <= endHour;
+        }
+
+        public String toString() {
+            return String.format("[%2d:00 ~ %2d:00]", startHour, endHour);
         }
 
     }
