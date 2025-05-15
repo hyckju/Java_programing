@@ -30,6 +30,13 @@ public class EmptyRoomFinder {
         static class Classroom {
             private final String name;
             private final List<TimeSlot> timeSlots = new ArrayList<>();
+
+            public Classroom(String name) {
+                this.name = name;
+            }
+
+            /// 배열추가
+
         }
 
     }
