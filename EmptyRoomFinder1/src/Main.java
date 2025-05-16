@@ -36,6 +36,9 @@ public class EmptyRoomFinder {
             }
 
             /// 배열추가
+            public void addTimeSlot(int startHour, int endHour) {
+                timeSlots.add(new TimeSlot(startHour, endHour));
+            }
 
         }
 
