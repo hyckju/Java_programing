@@ -37,8 +37,11 @@ public class EmptyRoomFinder {
 
             /// 배열추가
             public void addTimeSlot(int startHour, int endHour) {
+
                 timeSlots.add(new TimeSlot(startHour, endHour));
             }
+
+            /// 주어진 시각이 빈 강의실인지 확인
 
         }
 
