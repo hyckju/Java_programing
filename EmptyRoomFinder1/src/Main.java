@@ -42,6 +42,15 @@ public class EmptyRoomFinder {
             }
 
             /// 주어진 시각이 빈 강의실인지 확인
+            public boolean isEmptyAt(int hour) {
+                for (TimeSlot timeSlot : timeSlots) {
+                    if (timeSlot.contains(hour)) {
+                        return false;
+                    }
+                }
+                return true;
+            }
+            /// 예약된 전체 스케줄 문자열로 전환
 
         }
 
