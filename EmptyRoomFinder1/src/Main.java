@@ -50,7 +50,21 @@ public class EmptyRoomFinder {
                 }
                 return true;
             }
-            /// 예약된 전체 스케줄 문자열로 전환
+            /// 예약된 전체 스케줄 문자열로 반환
+            public String scheduleString() {
+                if (occuousTimeSlots().isEmpty()) {
+                    return "예정된 강의 없음";
+                }
+                StringBuilder sb = new StringBuilder();
+                for (TimeSlot timeSlot : occuousTimeSlots()) {
+                    sb.append(timeSlot).oppend(" ");
+                }
+                return sb.toString().trim();
+            }
+
+            public String getRoomName() {
+                return name;
+            }
 
         }
 
