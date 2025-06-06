@@ -71,17 +71,20 @@ public class EmptyRoomFinder {
         List<classRoom> classrooms = sampleClassrooms();
 
         Scanner scanner = new Scanner(System.in);
-        System.out.print("조회할 시간을 입력하세요 (0 ~ 23): ");
-        int hour;
-        try {
-            hour = scanner.nextInt();
-            if (hour < 0 || hour > 23) {
-                throw new IllegalArgumentException();
+        int hour = -1;
+
+        while (true) {
+            System.out.print("조회할 시간을 입력하세요 (0 ~ 23): ");
+            try {
+                hour = scanner.nextInt();
+                if (hour < 0 || hour > 23) {
+                    System.out.println("올바른 시간을 입력하세요.");
+                } else {
+                    break;
                 }
-        }catch (NumberFormatException e){
-            System.err.println("올바른 시간을 입력하세요.");
-            scanner.close();
-            return;
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
         }
 
         System.out.printf("\n== %02d:00 기준 빈 강의실 목록 ==\n", hour);
@@ -126,8 +129,6 @@ public class EmptyRoomFinder {
         classrooms.add(classroom4);
 
         classRoom classroom5 = new classRoom("505호");
-        classroom5.addTimeSlot(8, 10);
-        classroom5.addTimeSlot(10, 12);
         classrooms.add(classroom5);
 
         return classrooms;
