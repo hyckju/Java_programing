@@ -71,7 +71,7 @@ public class EmptyRoomFinder {
         List<classRoom> classrooms = sampleClassrooms();
 
         Scanner scanner = new Scanner(System.in);
-        int hour = -1;
+        int hour;
 
         while (true) {
             System.out.print("조회할 시간을 입력하세요 (0 ~ 23): ");
